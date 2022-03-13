@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <title>List</title>
+</head>
+<body>
+    <div class="container bootstrap snippets bootdey">
+        <h1 class="text-primary"><span class="glyphicon glyphicon-user"></span>Edit Profile</h1>
+       <a class="glyphicon glyphicon-user" href="/artist/view">CANCEL</a>
+        <hr>
+        <div class="row">
+            <!-- left column -->
+            {% for row in data %}
+            <div class="col-md-3">
+                <div class="text-center">
+                    <img src="/static/user_images/{{row['dp']}}" class="avatar img-circle" alt="avatar" width="100" height="100">
+
+                </div>
+            </div>
+
+            <!-- edit form column -->
+            <div class="col-md-9 personal-info">
+                <div class="alert alert-info alert-dismissable">
+                    <a class="panel-close close" data-dismiss="alert">×</a>
+                    <i class="fa fa-coffee"></i>
+                    <strong>Note:</strong>. Username and email are non editable.
+                </div>
+                <h3>Personal info</h3>
+
+
+                <form action="/edit" method="post" class="enter" enctype="multipart/form-data">
+                    <input type="file" name="file" class="form-control">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Username:</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" type="text" name="uname" value="{{row["Username"]}}" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Email:</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" type="text" value="{{row["Email"]}}" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Full name:</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" type="text" name="name" value="{{row["Full_Name"]}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Contact:</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" type="text" name="contact" value="{{row["Contact"]}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Location</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" type="text" name="location" value="{{location}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">About ME:</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" type="text" name="aboutme" value="{{aboutme}}">
+                        </div>
+                    </div>
+                    <input type="submit" value="Save">
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    {% endfor %}
+
+   
+ 
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

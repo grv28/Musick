@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Ubuntu:ital,wght@1,300&display=swap"
+    rel="stylesheet">
+
+  <title>login</title>
+  <script src="https://kit.fontawesome.com/0aa7b76fa4.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">"> -->
+</head>
+<style>
+  h1 {
+    /* padding-bottom: 4rem; */
+    display: inline-block;
+    font-size: 3.2rem;
+    line-height: 1.5;
+  }
+
+  #title {
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/static/back.jpeg);
+    background-color: black;
+    background-size: 150px;
+    width: 700px;
+    height: 670px;
+    border: 2px solid;
+    /* background: cover; */
+    color: white;
+    position: absolute;
+    width: 100%;
+  }
+
+  .logi {
+    position: relative;
+    margin-top: 70px;
+    margin-left: 420px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+  }
+
+  .image {
+    position: relative;
+    margin: auto;
+  }
+
+  .navbar-brand {
+    font-size: 2.5rem;
+    font-style: 'bold';
+  }
+
+  .navbar {
+
+    padding-bottom: 1.5rem;
+  }
+
+  .button {
+    /* border: 2px solid black; */
+    padding-left: 3rem;
+  }
+
+  h3 {
+    padding-top: 2rem;
+    padding-left: 10rem;
+    padding-bottom: 2rem;
+  }
+
+  .link {
+    display: inline-block;
+    margin-left: 15rem;
+  }
+
+  .link2 {
+    font-size: 1.2rem;
+  }
+  .row {
+    padding-bottom: 95px;
+    margin-left: 100px;
+    margin-top: 30px;
+  }
+form {
+  margin-top: 46px;
+}
+
+</style>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<nav>
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark new">
+    <img src="/static/logo.jpg " width="80" height="80" alt="" class="logo">
+    <a class="navbar-brand" href="">musick</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="">Home</a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Blog</a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Contact Us</a>
+
+        </li>
+
+
+      </ul>
+    </div>
+  </nav>
+</nav>
+<section id="title">
+  <div class="row">
+    <div class="logi">
+      <h1> Login to Your Account </h1>
+      <div class="button">
+
+      </div>
+      <form id="login" action="/login" method="post">
+        <div class="form-group">
+          <input type="text" name="Uname" id="Uname" class="form-control" placeholder="Username" required>
+        </div>
+        <div class="form-group">
+
+          <input type="password"  name="Pass" id="Pass" class="form-control"  placeholder="Password" required>
+
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Remember Me
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-light btn-lg btn-block">Login to Your Account</button>
+
+      </form>
+      <div class="link2">
+        Not a member yet?
+        <button type="button" class="btn btn-link"> <a href="/register">Register Now </a></button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<body>
+
+</body>
+
+</html>
