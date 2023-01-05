@@ -1,1 +1,2 @@
 Flask~=1.1
+javascript 8.0
